@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title> Todo </title>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+</head>
+<body onload="readData()">
+
+	Enter Todo: <input type="text" id="todos" name="todos"><br><br>
+
+	Date Todo: <input type="text" id="date" name="date"><br><br>
+
+	Enter Key:<input type="text" id="todoID"name="todoID"><br><br>
+
+	<input type="button" id="submit" onclick="submitButton()" value="Submit">
+
+	<input type="button" id="update" onclick="updateButton()" value="Update">
+
+	<input type="button" id="remove" onclick="removeButton()" value="Remove">
+
+	<div id="listData"></div>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+
+
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCRck0LT_K0c7WVqXcKfLGAAYGYm2SdYJU",
+    authDomain: "fir-data-3048a.firebaseapp.com",
+    databaseURL: "https://fir-data-3048a.firebaseio.com",
+    projectId: "fir-data-3048a",
+    storageBucket: "fir-data-3048a.appspot.com",
+    messagingSenderId: "433057611627",
+    appId: "1:433057611627:web:ca3aa4fc867e537c94562e",
+    measurementId: "G-YYBGCRZS0N"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+	<script type="text/javascript" src="todo.js"></script>
+
+</body>
+</html>
